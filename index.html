@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator App</title>
+
+  <!-- Google Fonts used-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- The link for the External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- Calculator body -->
+  <div class="calc" id="calc" role="application" aria-label="Calculator">
+
+    <!-- The top of the calculator -->
+    <div class="brand-strip">
+      <span class="brand-model">Calculator</span>
+    </div>
+
+    <!-- LCD screen assembly -->
+    <div class="screen-bezel">
+      <div class="display" role="region" aria-label="Display">
+        <div class="expr" id="expr" aria-live="polite"></div>
+        <div class="val"  id="val"  aria-live="assertive">0</div>
+      </div>
+    </div>
+
+    <!-- Button grid -->
+    <div class="grid" id="grid">
+
+      
+      <button class="btn fn" data-action="clear"   aria-label="Clear">AC</button>
+      <button class="btn fn" data-action="negate"  aria-label="Toggle sign">+/−</button>
+      <button class="btn fn" data-action="percent" aria-label="Percent">%</button>
+      <button class="btn op" data-action="op" data-op="÷" aria-label="Divide">÷</button>
+
+      
+      <button class="btn num" data-action="digit" data-d="7" aria-label="7">7</button>
+      <button class="btn num" data-action="digit" data-d="8" aria-label="8">8</button>
+      <button class="btn num" data-action="digit" data-d="9" aria-label="9">9</button>
+      <button class="btn op" data-action="op" data-op="×" aria-label="Multiply">×</button>
+
+    
+      <button class="btn num" data-action="digit" data-d="4" aria-label="4">4</button>
+      <button class="btn num" data-action="digit" data-d="5" aria-label="5">5</button>
+      <button class="btn num" data-action="digit" data-d="6" aria-label="6">6</button>
+      <button class="btn op"  data-action="op" data-op="−" aria-label="Subtract">−</button>
+
+     
+      <button class="btn num" data-action="digit" data-d="1" aria-label="1">1</button>
+      <button class="btn num" data-action="digit" data-d="2" aria-label="2">2</button>
+      <button class="btn num" data-action="digit" data-d="3" aria-label="3">3</button>
+      <button class="btn op"  data-action="op" data-op="+" aria-label="Add">+</button>
+
+      
+      <button class="btn num zero" data-action="digit" data-d="0" aria-label="0">0</button>
+      <button class="btn num" data-action="dot" aria-label="Decimal point">.</button>
+      <button class="btn eq" data-action="equals" aria-label="Equals">=</button>
+
+    </div>
+  </div>
+
+
+  <!-- The External JavaScript (loaded last so DOM is ready) -->
+  <script src="calculator.js"></script>
+
+</body>
+</html>
